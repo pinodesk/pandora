@@ -1,5 +1,6 @@
 package com.gitlab.muhammadkholidb.pandora.utility;
 
+import java.util.List;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
@@ -103,6 +104,37 @@ public final class TableViewUtils {
 
     public static <T> void sortDescending(TableView<T> table, TableColumn<T, ?> column) {
         sort(table, column, SortType.DESCENDING);
+    }
+
+    /**
+     * Enables sorting on specified columns in the list.
+     * 
+     * @param <T>
+     * @param enabled true value will enable sorting.
+     * @param columns the columns to enable sorting on.
+     */
+    public static <T extends TableColumn<?, ?>> void enableSort(boolean enabled, List<T> columns) {
+        columns.forEach(col -> col.setSortable(enabled));
+    }
+
+    /**
+     * Enables sorting on specified columns in the array.
+     * 
+     * @param enabled true value will enable sorting.
+     * @param columns the columns to enable sorting on.
+     */
+    public static void enableSort(boolean enabled, TableColumn<?, ?>... columns) {
+        enableSort(enabled, List.of(columns));
+    }
+
+    /**
+     * Enables sorting on all columns in specified table.
+     * 
+     * @param enabled true value will enable sorting.
+     * @param tbl     the table whose columns will be enabled for sorting.
+     */
+    public static void enableSort(boolean enabled, TableView<?> tbl) {
+        enableSort(enabled, tbl.getColumns());
     }
 
 }
