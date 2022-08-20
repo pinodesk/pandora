@@ -20,7 +20,8 @@ cache:
 
 default:
   before_script:
-    - apk add --update --no-cache git
+    - apt-get update 
+    - apt-get install -y git
     - git --version
     - git remote set-url --push origin "https://${GITLAB_USER_LOGIN}:${READ_WRITE_REPOSITORY_ACCESS_TOKEN}@${CI_SERVER_HOST}/${CI_PROJECT_PATH}.git"
     - git config user.name "${GITLAB_USER_NAME}"
