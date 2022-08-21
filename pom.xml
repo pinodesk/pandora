@@ -176,6 +176,7 @@
                 <version>1.16.0</version>
                 <configuration>
                     <mvnExecutable>./mvnw</mvnExecutable>
+                    <skipTestProject>true</skipTestProject>
                 </configuration>
             </plugin>
         </plugins>
