@@ -1,7 +1,10 @@
 package com.gitlab.muhammadkholidb.pandora.utility;
 
+import java.util.Collection;
+import java.util.List;
 import java.util.function.BiConsumer;
 import java.util.function.Supplier;
+import java.util.stream.Stream;
 
 import com.gitlab.muhammadkholidb.pandora.converter.DefaultStringConverterAdapter;
 import com.gitlab.muhammadkholidb.pandora.model.SimpleComboBoxModel;
@@ -16,7 +19,7 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.util.StringConverter;
 
-public class ComboBoxUtils {
+public final class ComboBoxUtils {
 
     private ComboBoxUtils() {
     }
@@ -39,8 +42,11 @@ public class ComboBoxUtils {
         cb.setSkin(comboBoxListViewSkin);
     }
 
-    public static <T> void initAutoComplete(ComboBox<T> cb, EventHandler<KeyEvent> keyEvent,
-            StringConverter<T> converter, Supplier<T> selectedSupplier) {
+    public static <T> void initAutoComplete(
+            ComboBox<T> cb,
+            EventHandler<KeyEvent> keyEvent,
+            StringConverter<T> converter,
+            Supplier<T> selectedSupplier) {
         if (!cb.isEditable()) {
             return;
         }
@@ -52,7 +58,9 @@ public class ComboBoxUtils {
         }
     }
 
-    public static <T> void initAutoComplete(ComboBox<T> cb, EventHandler<KeyEvent> keyEvent,
+    public static <T> void initAutoComplete(
+            ComboBox<T> cb,
+            EventHandler<KeyEvent> keyEvent,
             StringConverter<T> converter) {
         initAutoComplete(cb, keyEvent, converter, null);
     }
@@ -69,19 +77,33 @@ public class ComboBoxUtils {
         cb.getSelectionModel().clearAndSelect(index);
     }
 
-    public static <T> void clearSelection(ComboBox<T> cb) {
-        cb.getSelectionModel().clearSelection();
+    public static void clearSelection(ComboBox<?>... cbs) {
+        if (ArrayUtils.isNotEmpty(cbs)) {
+            Stream.of(cbs).forEach(cb -> cb.getSelectionModel().clearSelection());
+        }
     }
 
     @SuppressWarnings("unchecked")
     public static <T> void init(ComboBox<T> cb, StringConverter<T> converter, T... data) {
         if (ArrayUtils.isNotEmpty(data)) {
+            init(cb, converter, List.of(data));
+        }
+    }
+
+    public static <T> void init(ComboBox<T> cb, StringConverter<T> converter, Collection<T> data) {
+        if (data != null) {
             cb.setItems(FXCollections.observableArrayList(data));
         }
         cb.setConverter(converter);
     }
 
     public static void initSimple(ComboBox<SimpleComboBoxModel> cb, SimpleComboBoxModel... data) {
+        if (ArrayUtils.isNotEmpty(data)) {
+            initSimple(cb, List.of(data));
+        }
+    }
+
+    public static void initSimple(ComboBox<SimpleComboBoxModel> cb, List<SimpleComboBoxModel> data) {
         init(cb, new DefaultStringConverterAdapter<>(cb) {
 
             @Override
@@ -95,8 +117,8 @@ public class ComboBoxUtils {
     /**
      * Listens on selected item changes, accepts old value and new value.
      * 
-     * @param <T> type parameter of the ComboBox
-     * @param cb the ComboBox to listen to selected item changes
+     * @param <T>      type parameter of the ComboBox
+     * @param cb       the ComboBox to listen to selected item changes
      * @param consumer the consumer of old value and new value
      */
     public static <T> void onSelectedItemChanged(ComboBox<T> cb, BiConsumer<T, T> consumer) {

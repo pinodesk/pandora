@@ -10,7 +10,7 @@ import org.apache.commons.lang3.ObjectUtils;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 
-public class PageLoader {
+public final class PageLoader {
 
     private static final String TEMPLATE_SUFFIX = ".fxml";
 
@@ -39,7 +39,9 @@ public class PageLoader {
 
     public static PageContext load(IPage page, ResourceBundle resourceBundle) throws IOException {
         String templateName = page.templateName();
-        String path = String.format("%s%s", resourcePath,
+        String path = String.format(
+                "%s%s",
+                resourcePath,
                 (templateName.endsWith(TEMPLATE_SUFFIX) ? templateName : templateName + TEMPLATE_SUFFIX));
         URL location = PageLoader.class.getResource(path);
         FXMLLoader loader = new FXMLLoader();

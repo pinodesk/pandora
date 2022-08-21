@@ -1,12 +1,11 @@
 package com.gitlab.muhammadkholidb.pandora.utility;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
 
 @SuppressWarnings("unchecked")
-public class PageData {
+public final class PageData {
 
     @Getter
     private PageSet pageSet;
