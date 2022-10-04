@@ -1,6 +1,6 @@
-<a href="https://gitlab.com/muhammadkholidb/pandora/-/pipelines" target="_blank"><img alt="pipeline status" src="https://gitlab.com/muhammadkholidb/pandora/badges/develop/pipeline.svg" /></a> 
-<a href="https://gitlab.com/muhammadkholidb/pandora/-/jobs" target="_blank"><img alt="coverage report" src="https://gitlab.com/muhammadkholidb/pandora/badges/develop/coverage.svg" /></a> 
-<a href="https://jitpack.io/#com.gitlab.muhammadkholidb/pandora" target="_blank"><img alt="release" src="https://jitpack.io/v/com.gitlab.muhammadkholidb/pandora.svg" /></a> 
+<a href="https://gitlab.com/stoready/pandora/-/pipelines" target="_blank"><img alt="pipeline status" src="https://gitlab.com/stoready/pandora/badges/develop/pipeline.svg" /></a> 
+<a href="https://gitlab.com/stoready/pandora/-/jobs" target="_blank"><img alt="coverage report" src="https://gitlab.com/stoready/pandora/badges/develop/coverage.svg" /></a> 
+<a href="https://jitpack.io/#com.gitlab.stoready/pandora" target="_blank"><img alt="release" src="https://jitpack.io/v/com.gitlab.stoready/pandora.svg" /></a> 
 
 # Pandora
 
@@ -23,7 +23,7 @@ Collection of utilities and controls to support JavaFX projects
 
 ```xml
 <dependency>
-    <groupId>com.gitlab.muhammadkholidb</groupId>
+    <groupId>com.gitlab.stoready</groupId>
     <artifactId>pandora</artifactId>
     <version>develop-SNAPSHOT</version>
 </dependency>
