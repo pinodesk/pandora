@@ -1,9 +1,8 @@
 package com.gitlab.mudiasoft.pandora.factory;
 
-import java.math.RoundingMode;
-import java.text.DecimalFormat;
-import java.text.DecimalFormatSymbols;
 import java.util.Locale;
+
+import com.gitlab.mudiasoft.toolbox.data.StringNumberUtils;
 
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
@@ -13,17 +12,12 @@ public class NumberCellFactory<E, T extends Number> implements Callback<TableCol
 
     public static final int DEFAULT_DECIMAL_DIGIT = 0;
 
-    private static final Locale LOCALE_INDONESIAN = new Locale("id");
-
+    private Locale locale;
     private int decimalDigit;
-    private char decimalSeparator;
-    private char thousandSeparator;
 
     public NumberCellFactory(int decimalDigit, Locale locale) {
-        boolean isBahasa = LOCALE_INDONESIAN.getLanguage().equals(locale.getLanguage());
+        this.locale = locale;
         this.decimalDigit = decimalDigit;
-        this.decimalSeparator = isBahasa ? ',' : '.';
-        this.thousandSeparator = isBahasa ? '.' : ',';
     }
 
     public NumberCellFactory(Locale locale) {
@@ -44,15 +38,7 @@ public class NumberCellFactory<E, T extends Number> implements Callback<TableCol
                     super.setText(null);
                     super.setGraphic(null);
                 } else {
-                    DecimalFormat df = new DecimalFormat();
-                    DecimalFormatSymbols customSymbol = new DecimalFormatSymbols();
-                    customSymbol.setDecimalSeparator(decimalSeparator);
-                    customSymbol.setGroupingSeparator(thousandSeparator);
-                    df.setDecimalFormatSymbols(customSymbol);
-                    df.setMinimumFractionDigits(decimalDigit);
-                    df.setGroupingUsed(true);
-                    df.setRoundingMode(RoundingMode.HALF_UP);
-                    String formatted = df.format(item);
+                    String formatted = StringNumberUtils.format(item, locale, decimalDigit);
                     super.setText(formatted);
                 }
             }
