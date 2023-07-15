@@ -11,7 +11,9 @@ public final class ScrollPaneUtils {
     // https://stackoverflow.com/questions/26098295/scrollpane-content-becomes-blurry-after-dragging/50486726#50486726
     public static void fixBlur(ScrollPane scrollPane) {
         StackPane stackPane = (StackPane) scrollPane.lookup("ScrollPane .viewport");
-        stackPane.setCache(false);
+        if (stackPane != null) {
+            stackPane.setCache(false);
+        }
     }
 
 }
