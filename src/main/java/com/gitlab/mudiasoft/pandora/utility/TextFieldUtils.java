@@ -5,6 +5,7 @@ import java.util.function.BiConsumer;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+import com.gitlab.mudiasoft.pandora.formatter.DecimalFormatter;
 import com.gitlab.mudiasoft.pandora.formatter.DigitFormatter;
 
 import javafx.scene.control.TextField;
@@ -40,6 +41,12 @@ public final class TextFieldUtils {
     public static void onTextChanged(BiConsumer<String, String> consumer, TextField tf, TextField... tfs) {
         for (TextField textField : ArrayUtils.addAll(tfs, tf)) {
             textField.textProperty().addListener((o, ov, nv) -> consumer.accept(ov, nv));
+        }
+    }
+
+    public static void setDecimalTextFields(TextField... textFields) {
+        if (ArrayUtils.isNotEmpty(textFields)) {
+            Arrays.asList(textFields).forEach(tf -> tf.setTextFormatter(new DecimalFormatter()));
         }
     }
 
