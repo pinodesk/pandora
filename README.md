@@ -1,5 +1,5 @@
-<a href="https://gitlab.com/mudiasoft/mob/pandora/-/pipelines" target="_blank"><img alt="pipeline status" src="https://gitlab.com/mudiasoft/mob/pandora/badges/develop/pipeline.svg" /></a> 
-<a href="https://gitlab.com/mudiasoft/mob/pandora/-/jobs" target="_blank"><img alt="coverage report" src="https://gitlab.com/mudiasoft/mob/pandora/badges/develop/coverage.svg" /></a> 
+<a href="https://gitlab.com/mudiatech/pandora/-/pipelines" target="_blank"><img alt="pipeline status" src="https://gitlab.com/mudiatech/pandora/badges/develop/pipeline.svg" /></a> 
+<a href="https://gitlab.com/mudiatech/pandora/-/jobs" target="_blank"><img alt="coverage report" src="https://gitlab.com/mudiatech/pandora/badges/develop/coverage.svg" /></a> 
 
 # Pandora
 
@@ -12,7 +12,7 @@ Collection of utilities and controls to support JavaFX projects
 ```xml
 <repositories>
     <repository>
-        <id>mudiasoft</id>
+        <id>mudiatech</id>
         <url>https://gitlab.com/api/v4/groups/64413151/-/packages/maven</url>
     </repository>
 </repositories>
@@ -22,8 +22,8 @@ Collection of utilities and controls to support JavaFX projects
 
 ```xml
 <dependency>
-    <groupId>com.gitlab.mudiasoft.mob</groupId>
+    <groupId>com.mudiatech</groupId>
     <artifactId>pandora</artifactId>
-    <version>0.2.0-SNAPSHOT</version>
+    <version>0.1.0-SNAPSHOT</version>
 </dependency>
 ```
