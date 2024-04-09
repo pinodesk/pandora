@@ -3,7 +3,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.gitlab.mudiasoft</groupId>
+    <groupId>com.mudiatech</groupId>
     <artifactId>pandora</artifactId>
     <version>0.1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
@@ -16,7 +16,7 @@
     </properties>
     <repositories>
         <repository>
-            <id>mudiasoft</id>
+            <id>mudiatech</id>
             <url>https://gitlab.com/api/v4/groups/64413151/-/packages/maven</url>
         </repository>
     </repositories>
@@ -97,9 +97,9 @@
             <version>11.1.0</version>
         </dependency>
         <dependency>
-            <groupId>com.gitlab.mudiasoft</groupId>
+            <groupId>com.mudiatech</groupId>
             <artifactId>toolbox</artifactId>
-            <version>0.1.0-SNAPSHOT</version>
+            <version>0.1.0</version>
         </dependency>
     </dependencies>
     <build>
