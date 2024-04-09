@@ -24,6 +24,6 @@ Collection of utilities and controls to support JavaFX projects
 <dependency>
     <groupId>com.mudiatech</groupId>
     <artifactId>pandora</artifactId>
-    <version>0.1.0-SNAPSHOT</version>
+    <version>0.2.0-SNAPSHOT</version>
 </dependency>
 ```
