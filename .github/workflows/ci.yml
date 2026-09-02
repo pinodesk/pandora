@@ -35,8 +35,20 @@ jobs:
           key: ${{ runner.os }}-sonar
           restore-keys: ${{ runner.os }}-sonar
 
-      - name: Build and analyze
-        run: ./mvnw -s .m2/settings.xml --batch-mode spotless:check pmd:check verify -U org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Djava.awt.headless=true -Dtestfx.robot=glass -Dtestfx.headless=true -Dglass.platform=Monocle -Dmonocle.platform=Headless -Dprism.order=sw -Dprism.text=t2k -Dtestfx.setup.timeout=2500 -Dprism.verbose=true
+      - name: Build and test
+        run: ./mvnw -s .m2/settings.xml --batch-mode spotless:check pmd:check verify -U -Djava.awt.headless=true -Dtestfx.robot=glass -Dtestfx.headless=true -Dglass.platform=Monocle -Dmonocle.platform=Headless -Dprism.order=sw -Dprism.text=t2k -Dtestfx.setup.timeout=2500 -Dprism.verbose=true
+        env:
+          MAVEN_USERNAME: ${{ github.actor }}
+          MAVEN_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate coverage report
+        run: ./mvnw -s .m2/settings.xml --batch-mode jacoco:report
+        env:
+          MAVEN_USERNAME: ${{ github.actor }}
+          MAVEN_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Analyze with SonarCloud
+        run: ./mvnw -s .m2/settings.xml --batch-mode org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
         env:
           MAVEN_USERNAME: ${{ github.actor }}
           MAVEN_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
