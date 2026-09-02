@@ -9,6 +9,7 @@
     <packaging>jar</packaging>
     <name>Pandora</name>
     <description>Collection of utilities and controls to support JavaFX projects</description>
+    <url>https://github.com/pinodesk/pandora</url>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>11</maven.compiler.source>
@@ -16,18 +17,18 @@
     </properties>
     <repositories>
         <repository>
-            <id>mudiatech</id>
-            <url>https://gitlab.com/api/v4/groups/64413151/-/packages/maven</url>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/pinodesk/toolbox</url>
         </repository>
     </repositories>
     <distributionManagement>
         <repository>
-            <id>gitlab-maven</id>
-            <url>https://gitlab.com/api/v4/projects/25782151/packages/maven</url>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/pinodesk/pandora</url>
         </repository>
         <snapshotRepository>
-            <id>gitlab-maven</id>
-            <url>https://gitlab.com/api/v4/projects/25782151/packages/maven</url>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/pinodesk/pandora</url>
         </snapshotRepository>
     </distributionManagement>
     <dependencies>
@@ -59,7 +60,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.24</version>
+            <version>1.18.38</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -99,7 +100,7 @@
         <dependency>
             <groupId>com.pinodesk</groupId>
             <artifactId>toolbox</artifactId>
-            <version>0.1.0</version>
+            <version>0.3.0</version>
         </dependency>
     </dependencies>
     <build>
@@ -196,10 +197,14 @@
             <plugin>
                 <groupId>com.amashchenko.maven.plugin</groupId>
                 <artifactId>gitflow-maven-plugin</artifactId>
-                <version>1.16.0</version>
+                <version>1.21.0</version>
                 <configuration>
                     <mvnExecutable>./mvnw</mvnExecutable>
                     <skipTestProject>true</skipTestProject>
+                    <gitFlowConfig>
+                        <productionBranch>main</productionBranch>
+                        <developmentBranch>main</developmentBranch>
+                    </gitFlowConfig>
                 </configuration>
             </plugin>
         </plugins>
