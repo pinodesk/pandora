@@ -1,9 +1,9 @@
-![GitHub Release](https://img.shields.io/github/v/release/pinodesk/pandora)
-![CI](https://github.com/pinodesk/pandora/actions/workflows/ci.yml/badge.svg)
-![codecov](https://codecov.io/gh/pinodesk/pandora/branch/main/graph/badge.svg)
+[![GitHub Release](https://img.shields.io/github/v/release/pinodesk/pandora)](https://github.com/pinodesk/pandora/releases)
+[![CI](https://github.com/pinodesk/pandora/actions/workflows/ci.yml/badge.svg)](https://github.com/pinodesk/pandora/actions/workflows/ci.yml)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=pinodesk_pandora&metric=coverage)](https://sonarcloud.io/summary/new_code?id=pinodesk_pandora)
 [![Quality gate status](https://sonarcloud.io/api/project_badges/measure?project=pinodesk_pandora&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=pinodesk_pandora)
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=pinodesk_pandora&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=pinodesk_pandora)
-![License](https://img.shields.io/github/license/pinodesk/pandora)
+[![License](https://img.shields.io/github/license/pinodesk/pandora)](https://github.com/pinodesk/pandora/blob/main/LICENSE)
 
 # Pandora
 
