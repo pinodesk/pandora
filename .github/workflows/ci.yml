@@ -18,6 +18,9 @@ jobs:
           java-version: "11"
           distribution: "temurin"
           cache: "maven"
+          server-id: github
+          server-username: MAVEN_USERNAME
+          server-password: MAVEN_PASSWORD
 
       - name: Install JavaFX dependencies
         run: sudo apt-get update && sudo apt-get install -y libxtst6 libgtk2.0-0
