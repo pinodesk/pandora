@@ -31,7 +31,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Run gitflow release
-        run: ./mvnw --batch-mode gitflow:release -DversionDigitToIncrement=1 # --batch-mode to avoid interactive prompts
+        run: ./mvnw -s .m2/settings.xml --batch-mode gitflow:release -DversionDigitToIncrement=1 # --batch-mode to avoid interactive prompts
         env:
           MAVEN_USERNAME: ${{ github.actor }}
           MAVEN_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
@@ -44,7 +44,7 @@ jobs:
         run: git checkout ${{ steps.tag.outputs.tag }}
 
       - name: Deploy to GitHub Packages
-        run: ./mvnw --batch-mode deploy -DskipTests
+        run: ./mvnw -s .m2/settings.xml --batch-mode deploy -DskipTests
         env:
           MAVEN_USERNAME: ${{ github.actor }}
           MAVEN_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
