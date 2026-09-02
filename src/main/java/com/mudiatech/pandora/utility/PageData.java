@@ -1,4 +1,4 @@
-package com.mudiatech.pandora.utility;
+package com.pinodesk.pandora.utility;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

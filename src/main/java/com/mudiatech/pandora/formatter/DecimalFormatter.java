@@ -1,4 +1,4 @@
-package com.mudiatech.pandora.formatter;
+package com.pinodesk.pandora.formatter;
 
 import javafx.scene.control.TextFormatter;
 

@@ -1,4 +1,4 @@
-package com.mudiatech.pandora.utility;
+package com.pinodesk.pandora.utility;
 
 import java.util.Collection;
 import java.util.List;
@@ -8,8 +8,8 @@ import java.util.stream.Stream;
 
 import org.apache.commons.lang3.ArrayUtils;
 
-import com.mudiatech.pandora.converter.DefaultStringConverterAdapter;
-import com.mudiatech.pandora.model.SimpleComboBoxModel;
+import com.pinodesk.pandora.converter.DefaultStringConverterAdapter;
+import com.pinodesk.pandora.model.SimpleComboBoxModel;
 
 import javafx.collections.FXCollections;
 import javafx.event.EventHandler;

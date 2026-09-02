@@ -1,4 +1,4 @@
-package com.mudiatech.pandora.exception;
+package com.pinodesk.pandora.exception;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

@@ -1,4 +1,4 @@
-package com.mudiatech.pandora.utility;
+package com.pinodesk.pandora.utility;
 
 import java.util.Arrays;
 
@@ -6,7 +6,7 @@ import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.StringUtils;
 
-import com.mudiatech.pandora.exception.StageException;
+import com.pinodesk.pandora.exception.StageException;
 
 import javafx.event.EventHandler;
 import javafx.scene.Scene;

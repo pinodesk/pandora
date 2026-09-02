@@ -1,4 +1,4 @@
-package com.mudiatech.pandora;
+package com.pinodesk.pandora;
 
 import java.util.concurrent.CountDownLatch;
 

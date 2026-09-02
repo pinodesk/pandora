@@ -1,4 +1,4 @@
-package com.mudiatech.pandora.utility;
+package com.pinodesk.pandora.utility;
 
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;

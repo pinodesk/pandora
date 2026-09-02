@@ -1,4 +1,4 @@
-package com.mudiatech.pandora.constant;
+package com.pinodesk.pandora.constant;
 
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyCodeCombination;

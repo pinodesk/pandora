@@ -22,7 +22,7 @@ Collection of utilities and controls to support JavaFX projects
 
 ```xml
 <dependency>
-    <groupId>com.mudiatech</groupId>
+    <groupId>com.pinodesk</groupId>
     <artifactId>pandora</artifactId>
     <version>0.2.0-SNAPSHOT</version>
 </dependency>

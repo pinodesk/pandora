@@ -1,4 +1,4 @@
-package com.mudiatech.pandora.factory;
+package com.pinodesk.pandora.factory;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;

@@ -1,8 +1,8 @@
-package com.mudiatech.pandora.factory;
+package com.pinodesk.pandora.factory;
 
 import java.util.Locale;
 
-import com.mudiatech.toolbox.data.StringNumberUtils;
+import com.pinodesk.toolbox.data.StringNumberUtils;
 
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;

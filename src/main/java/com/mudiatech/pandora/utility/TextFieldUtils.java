@@ -1,12 +1,12 @@
-package com.mudiatech.pandora.utility;
+package com.pinodesk.pandora.utility;
 
 import java.util.Arrays;
 import java.util.function.BiConsumer;
 
 import org.apache.commons.lang3.ArrayUtils;
 
-import com.mudiatech.pandora.formatter.DecimalFormatter;
-import com.mudiatech.pandora.formatter.DigitFormatter;
+import com.pinodesk.pandora.formatter.DecimalFormatter;
+import com.pinodesk.pandora.formatter.DigitFormatter;
 
 import javafx.scene.control.TextField;
 

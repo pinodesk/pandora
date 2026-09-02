@@ -1,4 +1,4 @@
-package com.mudiatech.pandora.control;
+package com.pinodesk.pandora.control;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.mudiatech.pandora.factory;
+package com.pinodesk.pandora.factory;
 
 import javafx.scene.control.TableCell;
 

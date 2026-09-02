@@ -1,4 +1,4 @@
-package com.mudiatech.pandora.utility;
+package com.pinodesk.pandora.utility;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.contains;
@@ -7,7 +7,7 @@ import static org.hamcrest.Matchers.is;
 import java.util.ListResourceBundle;
 import java.util.ResourceBundle;
 
-import com.mudiatech.pandora.JavaFXTestBase;
+import com.pinodesk.pandora.JavaFXTestBase;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
