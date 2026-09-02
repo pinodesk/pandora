@@ -27,12 +27,21 @@ jobs:
 
       - name: Build with Maven
         run: ./mvnw -s .m2/settings.xml --batch-mode --show-version spotless:check pmd:check test-compile -U
+        env:
+          MAVEN_USERNAME: ${{ github.actor }}
+          MAVEN_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Run tests
         run: ./mvnw -s .m2/settings.xml --batch-mode verify -U -Djava.awt.headless=true -Dtestfx.robot=glass -Dtestfx.headless=true -Dglass.platform=Monocle -Dmonocle.platform=Headless -Dprism.order=sw -Dprism.text=t2k -Dtestfx.setup.timeout=2500 -Dprism.verbose=true
+        env:
+          MAVEN_USERNAME: ${{ github.actor }}
+          MAVEN_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate coverage report
         run: ./mvnw -s .m2/settings.xml jacoco:report
+        env:
+          MAVEN_USERNAME: ${{ github.actor }}
+          MAVEN_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v5
